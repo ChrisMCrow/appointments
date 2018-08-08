@@ -30,12 +30,27 @@
           <label for="time">Enter the time of your appointment:</label>
           <input id="time" class="form-control" type="text">
         </div>
-        <button type="submit" class="btn">Submit</button>
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#submitModal">Submit</button>
       </form>
 
       <!--Modal-->
-
-      
+      <div id="submitModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Success!</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you <span id="nameInput"></span>! Your appointment was successfully booked for <span id="dateInput"></span> at <span id="timeInput"></span>. Here's the notes you added for us:</p>
+              <p id="descriptionInput"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
